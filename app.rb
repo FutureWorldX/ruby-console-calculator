@@ -15,6 +15,32 @@ is_operand_correct = false
 value_operand = gets.chomp
 puts "The mathematical operation chosen is #{value_operand}."
 
+if value_operand == "+"
+    puts "Addition was chosen"
+    is_operand_correct = true
+elsif value_operand == "-"
+    puts "Subtraction was chosen"
+    is_operand_correct = true
+elsif value_operand == "*"
+    puts "Multiplication was chosen" 
+    is_operand_correct = true
+elsif value_operand == "/"
+    puts "Division was chosen" 
+    is_operand_correct = true
+elsif value_operand == "%"    
+    puts "Modulus (getting a remainder) was chosen" 
+    is_operand_correct = true
+elsif value_operand == "**"    
+    puts "Exponent ** (power)was chosen" 
+    is_operand_correct = true
+elsif value_operand == "^"    
+    puts "Exponent ^ (power) was chosen" 
+    value_operand = "**"
+    is_operand_correct = true
+else 
+    puts "An invalid input was entered. Try again later."
+end
+
 #Console output to ask for the second number
 puts "Please enter the second number:"
 #Storing the second console input to a float called num2
